@@ -1,0 +1,138 @@
+/* body {
+  text-align: center;
+}
+.btn {
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+  border: 10px solid black;
+  margin: 2.5rem;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+.red {
+  background-color: palevioletred;
+}
+.yellow {
+  background-color: lightsalmon;
+}
+.green {
+  background-color: lightskyblue;
+}
+.purple {
+  background-color: plum;
+}
+
+.flash {
+  background-color: white;
+}
+
+.userFlash {
+  background-color: green;
+} */
+
+
+
+/* General Page Styling */
+/* General Page Styling */
+body {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #e6e9f0);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Button Container */
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(2, 220px);
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Game Buttons */
+.btn {
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+  border: 6px solid #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Button Colors */
+.red {
+  background: linear-gradient(145deg, #ff4b5c, #d63447);
+}
+
+.yellow {
+  background: linear-gradient(145deg, #ffb84c, #f57f17);
+}
+
+.green {
+  background: linear-gradient(145deg, #4cd137, #44bd32);
+}
+
+.purple {
+  background: linear-gradient(145deg, #9c88ff, #8c7ae6);
+}
+
+/* Glow Flash Effects */
+.flash {
+  filter: brightness(2) saturate(1.5);
+  box-shadow: 0 0 40px white, 0 0 60px white;
+  transform: scale(1.05);
+}
+
+.userFlash {
+  filter: brightness(1.8) saturate(1.4);
+  box-shadow: 0 0 30px lime, 0 0 50px lime;
+  transform: scale(1.05);
+}
+
+/* Game Over Effect */
+body.game-over {
+  background: #ff4b5c !important;
+  animation: shake 0.3s ease-in-out 2;
+}
+
+/* Shake Animation */
+@keyframes shake {
+  0% { transform: translate(2px, 2px); }
+  25% { transform: translate(-2px, -3px); }
+  50% { transform: translate(3px, 2px); }
+  75% { transform: translate(-2px, 3px); }
+  100% { transform: translate(2px, -2px); }
+}
